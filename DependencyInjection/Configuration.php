@@ -40,6 +40,7 @@ class Configuration implements ConfigurationInterface
             ->scalarNode('skip_builtin_functions')->defaultFalse()->end()
             ->scalarNode('request_query_argument')->defaultFalse()->end()
             ->scalarNode('response_header')->defaultValue('X-Xhprof-Url')->end()
+            ->scalarNode('server_id')->defaultValue('default')->end()
             ->enumNode('command')
             ->values(array('on', 'option', 'off'))
             ->defaultValue('option')
