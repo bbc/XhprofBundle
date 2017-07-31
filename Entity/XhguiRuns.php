@@ -66,7 +66,7 @@ class XhguiRuns implements iXHProfRuns, ContainerAwareInterface
             ->setPmu($pmu)
             ->setWt($wt)
             ->setCpu($cpu)
-            ->setServerId(getenv('SERVER_NAME'))
+            ->setServerId($this->container->getParameter('jns_xhprof.server_id'))
             ->setAggregateCallsInclude('')
             ->setTimestamp(new \DateTime())
             ;
