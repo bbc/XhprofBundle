@@ -32,7 +32,7 @@
         </service>
 
         <service id="data_collector.xhprof" class="Jns\Bundle\XhprofBundle\DataCollector\XhprofCollector">
-            <tag name="data_collector" template="JnsXhprofBundle:Collector:xhprof" id="xhprof" />
+            <tag name="data_collector" template="@JnsXhprof/Collector/xhprof.html.twig" id="xhprof" />
             <argument type="service" id="service_container" />
             <argument type="service" id="logger" on-invalid="null" />
             <argument type="service" id="doctrine" on-invalid="null" />
